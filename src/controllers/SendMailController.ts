@@ -5,6 +5,7 @@ import { SurveysUsersRepository } from "../repositories/surveysUsersRepository";
 import { UsersRepository } from "../repositories/usersRepository";
 import { resolve } from "path";
 import SendMailService from "../services/sendMailService";
+import { AppError } from "../errors/appError";
 
 class SendMailController {
 
@@ -18,17 +19,14 @@ class SendMailController {
             const user = await usersRepository.findOne({ email })
 
             if (!user){
-                return response.status(400).json({
-                    error: "User does not exists",
-                });
+                throw new AppError("User does not exists");
+
             }
 
             const survey = await surveysRepository.findOne({id: survey_id});
 
             if (!survey){
-                return response.status(400).json({
-                    error: "Survey does not exists",
-                });
+                throw new AppError("Survey user does not exists!");
             }
             
             
