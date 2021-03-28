@@ -29,7 +29,7 @@ class UserController{
         })
 
         if(userAlredyExists){
-            throw new AppError("User does not exists!");  
+            throw new AppError("User alredy exists!");  
         }
 
         const user = usersRepository.create({  
