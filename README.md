@@ -4,7 +4,7 @@ email-api is an open-source backend api in node.js, which receives and saves the
 
 I use an example of a [Net Promoter Score(NPS)](https://en.wikipedia.org/wiki/Net_Promoter), which would be useful for a lot of companies.
 
-(generated email example)[https://github.com/marcoulakis/email-api/blob/main/example.png]
+[generated email example](https://github.com/marcoulakis/email-api/blob/main/example.png)
 
 ## How to run it?
 
